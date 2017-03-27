@@ -50,7 +50,7 @@ final class HexClockView: UIView {
         clockLabel.translatesAutoresizingMaskIntoConstraints = false
         clockLabel.textColor = UIColor.white
         clockLabel.textAlignment = .center
-        clockLabel.font = UIFont.systemFont(ofSize: 250, weight: UIFontWeightUltraLight)
+        clockLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 250, weight: UIFontWeightUltraLight)
 
         addSubview(clockLabel)
         clockLabel.pinTo(self)
