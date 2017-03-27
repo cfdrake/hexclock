@@ -5,6 +5,15 @@
 
 import UIKit
 
+/// Applies a property-change block, with or without, animations depending on the `animated` flag.
+func animateOrApply(animationDuration: TimeInterval, animated: Bool, block: @escaping () -> Void) {
+    if animated {
+        UIView.animate(withDuration: animationDuration, animations: block)
+    } else {
+        block()
+    }
+}
+
 /// Hex Clock view.
 final class HexClockView: UIView {
 
@@ -16,7 +25,6 @@ final class HexClockView: UIView {
     // MARK: Initialization
 
     init() {
-        // Choose an arbitrary, default frame.
         super.init(frame: CGRect(x: 0, y: 0, width: 400, height: 200))
         setup()
     }
@@ -38,7 +46,6 @@ final class HexClockView: UIView {
 
         // Create clock label.
         let clockLabel = UILabel()
-        addSubview(clockLabel)
 
         clockLabel.translatesAutoresizingMaskIntoConstraints = false
         clockLabel.textColor = UIColor.white
@@ -46,6 +53,7 @@ final class HexClockView: UIView {
         clockLabel.font = UIFont.systemFont(ofSize: 250, weight: UIFontWeightUltraLight)
         clockLabel.pinTo(self)
 
+        addSubview(clockLabel)
         self.clockLabel = clockLabel
 
         // Setup timer.
@@ -55,31 +63,19 @@ final class HexClockView: UIView {
             }
         }
 
-        updateTime(initialLoad: true)
+        updateTime(animated: false)
     }
 
     // MARK: Actions
 
-    private func updateTime(initialLoad: Bool = false) {
+    private func updateTime(animated: Bool = true) {
         let now = Date()
-        let components = Calendar.current.dateComponents([.hour, .minute, .second], from: now)
+        let (hour, minute, second) = now.timeComponents
 
-        guard let hour = components.hour,
-            let minute = components.minute,
-            let second = components.second else { return }
-
-        // Update clock display.
         clockLabel?.text = "#\(hour)\(minute)\(second)"
 
-        // Fade to next color.
-        let animate = {
+        animateOrApply(animationDuration: 1.0, animated: animated) {
             self.backgroundColor = UIColor.fromTime(hour: hour, minute: minute, second: second)
-        }
-
-        if initialLoad {
-            animate()
-        } else {
-            UIView.animate(withDuration: 1.0, animations: animate)
         }
     }
 

@@ -10,6 +10,7 @@
 		3B056C681E886EAD0045E50D /* HexClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B056C671E886EAD0045E50D /* HexClockView.swift */; };
 		3B056C6A1E88853D0045E50D /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B056C691E88853D0045E50D /* UIView+AutoLayout.swift */; };
 		3B056C6C1E8885C70045E50D /* UIColor+FromTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B056C6B1E8885C70045E50D /* UIColor+FromTime.swift */; };
+		3B056C6E1E88AD9F0045E50D /* Date+HMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B056C6D1E88AD9F0045E50D /* Date+HMS.swift */; };
 		3B9D51511E302D96005B0F02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9D51501E302D96005B0F02 /* AppDelegate.swift */; };
 		3B9D51531E302D96005B0F02 /* HexClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9D51521E302D96005B0F02 /* HexClockViewController.swift */; };
 		3B9D51581E302D96005B0F02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B9D51571E302D96005B0F02 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 		3B056C671E886EAD0045E50D /* HexClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexClockView.swift; sourceTree = "<group>"; };
 		3B056C691E88853D0045E50D /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		3B056C6B1E8885C70045E50D /* UIColor+FromTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+FromTime.swift"; sourceTree = "<group>"; };
+		3B056C6D1E88AD9F0045E50D /* Date+HMS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+HMS.swift"; sourceTree = "<group>"; };
 		3B9D514D1E302D96005B0F02 /* HexClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9D51501E302D96005B0F02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B9D51521E302D96005B0F02 /* HexClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexClockViewController.swift; sourceTree = "<group>"; };
@@ -37,14 +39,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B4CB91C1E870CE200D70CD9 /* Source */ = {
+		3B056C6F1E88AF930045E50D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3B056C691E88853D0045E50D /* UIView+AutoLayout.swift */,
+				3B056C6B1E8885C70045E50D /* UIColor+FromTime.swift */,
+				3B056C6D1E88AD9F0045E50D /* Date+HMS.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		3B056C701E88AF9C0045E50D /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				3B9D51501E302D96005B0F02 /* AppDelegate.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		3B056C711E88AFA00045E50D /* Views/Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				3B9D51521E302D96005B0F02 /* HexClockViewController.swift */,
 				3B056C671E886EAD0045E50D /* HexClockView.swift */,
-				3B056C691E88853D0045E50D /* UIView+AutoLayout.swift */,
-				3B056C6B1E8885C70045E50D /* UIColor+FromTime.swift */,
+			);
+			name = Views/Controllers;
+			sourceTree = "<group>";
+		};
+		3B4CB91C1E870CE200D70CD9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3B056C701E88AF9C0045E50D /* Application */,
+				3B056C6F1E88AF930045E50D /* Extensions */,
+				3B056C711E88AFA00045E50D /* Views/Controllers */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -154,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B056C6E1E88AD9F0045E50D /* Date+HMS.swift in Sources */,
 				3B056C6C1E8885C70045E50D /* UIColor+FromTime.swift in Sources */,
 				3B9D51531E302D96005B0F02 /* HexClockViewController.swift in Sources */,
 				3B056C6A1E88853D0045E50D /* UIView+AutoLayout.swift in Sources */,
