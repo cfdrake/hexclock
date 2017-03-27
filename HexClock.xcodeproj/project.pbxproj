@@ -42,11 +42,12 @@
 		3B056C6F1E88AF930045E50D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				3B056C691E88853D0045E50D /* UIView+AutoLayout.swift */,
-				3B056C6B1E8885C70045E50D /* UIColor+FromTime.swift */,
 				3B056C6D1E88AD9F0045E50D /* Date+HMS.swift */,
+				3B056C6B1E8885C70045E50D /* UIColor+FromTime.swift */,
+				3B056C691E88853D0045E50D /* UIView+AutoLayout.swift */,
 			);
 			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3B056C701E88AF9C0045E50D /* Application */ = {
@@ -55,15 +56,17 @@
 				3B9D51501E302D96005B0F02 /* AppDelegate.swift */,
 			);
 			name = Application;
+			path = Application;
 			sourceTree = "<group>";
 		};
-		3B056C711E88AFA00045E50D /* Views/Controllers */ = {
+		3B056C711E88AFA00045E50D /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				3B9D51521E302D96005B0F02 /* HexClockViewController.swift */,
 				3B056C671E886EAD0045E50D /* HexClockView.swift */,
+				3B9D51521E302D96005B0F02 /* HexClockViewController.swift */,
 			);
-			name = Views/Controllers;
+			name = UI;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		3B4CB91C1E870CE200D70CD9 /* Source */ = {
@@ -71,7 +74,7 @@
 			children = (
 				3B056C701E88AF9C0045E50D /* Application */,
 				3B056C6F1E88AF930045E50D /* Extensions */,
-				3B056C711E88AFA00045E50D /* Views/Controllers */,
+				3B056C711E88AFA00045E50D /* UI */,
 			);
 			path = Source;
 			sourceTree = "<group>";
