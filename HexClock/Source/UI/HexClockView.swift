@@ -72,8 +72,9 @@ final class HexClockView: UIView {
     private func updateTime(animated: Bool = true) {
         let now = Date()
         let (hour, minute, second) = now.timeComponents
+        let padNumber = { n in String(format: "%02d", n) }
 
-        clockLabel?.text = "#\(hour)\(minute)\(second)"
+        clockLabel?.text = "#\(padNumber(hour))\(padNumber(minute))\(padNumber(second))"
 
         animateOrApply(animationDuration: 1.0, animated: animated) {
             self.backgroundColor = UIColor.fromTime(hour: hour, minute: minute, second: second)
