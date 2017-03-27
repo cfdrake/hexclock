@@ -51,9 +51,10 @@ final class HexClockView: UIView {
         clockLabel.textColor = UIColor.white
         clockLabel.textAlignment = .center
         clockLabel.font = UIFont.systemFont(ofSize: 250, weight: UIFontWeightUltraLight)
-        clockLabel.pinTo(self)
 
         addSubview(clockLabel)
+        clockLabel.pinTo(self)
+
         self.clockLabel = clockLabel
 
         // Setup timer.
