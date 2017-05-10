@@ -12,6 +12,13 @@ Fastlane is used to manage the build and deploy process - please install Fastlan
 $ bundle install
 ```
 
+Next, configure the secrets needed for this project. Create a `.env` file, filling out this template:
+
+```bash
+FASTLANE_USER="<apple id>"
+HEXCLOCK_CERTS_REPO="<git repository holding certificates>"
+```
+
 ## Building
 
 ### Development
@@ -21,8 +28,6 @@ Deploying and testing on the Simulator requires no certificate. Simply build and
 To deploy and test on a physical Apple TV, begin by fetching the development certificate:
 
 ```
-$ export FASTLANE_USER="<apple id>"
-$ export HEXCLOCK_CERTS_REPO="<git repository holding certificates>"
 $ bundle exec fetch_dev_cert
 ```
 
@@ -33,8 +38,6 @@ To build for the Simulator or a physical device, open the `xcworkspace` file and
 First, begin by fetching the App Store certificate:
 
 ```
-$ export FASTLANE_USER="<apple id>"
-$ export HEXCLOCK_CERTS_REPO="<git repository holding certificates>"
 $ bundle exec fastlane fetch_release_cert
 ```
 

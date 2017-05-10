@@ -10,7 +10,6 @@ lane :fetch_dev_cert do
   match(app_identifier: APP_ID, platform: "tvos", type: "development", git_url: CERTS_REPO)
 end
 
-lane :release do
+lane :fetch_release_cert do
   match(app_identifier: APP_ID, platform: "tvos", type: "appstore", git_url: CERTS_REPO)
-  gym
 end
