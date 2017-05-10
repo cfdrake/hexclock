@@ -46,7 +46,6 @@
 				3B056C6B1E8885C70045E50D /* UIColor+FromTime.swift */,
 				3B056C691E88853D0045E50D /* UIView+AutoLayout.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -55,7 +54,6 @@
 			children = (
 				3B9D51501E302D96005B0F02 /* AppDelegate.swift */,
 			);
-			name = Application;
 			path = Application;
 			sourceTree = "<group>";
 		};
@@ -65,7 +63,6 @@
 				3B056C671E886EAD0045E50D /* HexClockView.swift */,
 				3B9D51521E302D96005B0F02 /* HexClockViewController.swift */,
 			);
-			name = UI;
 			path = UI;
 			sourceTree = "<group>";
 		};

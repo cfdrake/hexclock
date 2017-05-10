@@ -26,20 +26,14 @@ HEXCLOCK_CERTS_REPO="<git repository holding certificates>"
 First, begin by fetching the development certificate for deployment to development devices:
 
 ```
-$ bundle exec cert
+$ bundle exec fetch_dev_cert
 ```
 
 To build for the Simulator or a physical device, simply open the `xcworkspace` file and select `Product > Run`.
 
 ### Beta/Release
 
-To build a beta version and upload to TestFlight, execute the following command:
-
-```
-$ bundle exec fastlane beta
-```
-
-To build and deploy to the App Store:
+To build for the App Store, run:
 
 ```
 $ bundle exec fastlane release

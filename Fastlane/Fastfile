@@ -6,20 +6,11 @@ default_platform :ios
 APP_ID = "me.colindrake.HexClock"
 CERTS_REPO = ENV["HEXCLOCK_CERTS_REPO"]
 
-lane :cert do
+lane :fetch_dev_cert do
   match(app_identifier: APP_ID, platform: "tvos", type: "development", git_url: CERTS_REPO)
 end
 
-lane :beta do
+lane :release do
   match(app_identifier: APP_ID, platform: "tvos", type: "appstore", git_url: CERTS_REPO)
   gym
-  # pilot
-end
-
-lane :release do
-  match(platform: "tvos", type: "appstore", git_url: ENV["HEXCLOCK_CERTS_REPO"])
-  # snapshot
-  gym
-  # deliver(force: true)
-  # frameit
 end
