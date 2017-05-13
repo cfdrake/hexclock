@@ -28,7 +28,7 @@ $ export HEXCLOCK_CERTS_REPO="<git repository holding certificates>"
 $ bundle exec fetch_dev_cert
 ```
 
-To build for the Simulator or a physical device, open the `xcworkspace` file and select `Product > Run`.
+To run on physical device, select your Apple TV device, then select `Product > Run`.
 
 ### Release
 
@@ -40,7 +40,7 @@ $ export HEXCLOCK_CERTS_REPO="<git repository holding certificates>"
 $ bundle exec fastlane fetch_release_cert
 ```
 
-To build for the App Store, open the `xcworkspace` file and select `Product > Archive`.
+To build for the App Store, select `Product > Archive`.
 
 ## License
 
