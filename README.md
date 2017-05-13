@@ -1,4 +1,4 @@
-# HexClock
+# Hex Color Clock
 
 A simple, minimal hexadecimal clock for the Apple TV.
 
