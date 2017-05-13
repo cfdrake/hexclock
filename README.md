@@ -2,6 +2,8 @@
 
 A simple, minimal hexadecimal clock for the Apple TV.
 
+[Download it on the App Store!](https://itunes.apple.com/us/app/hex-color-clock/id1207660670?mt%3D8)
+
 ![](https://github.com/cfdrake/hexclock/raw/master/Screenshot.png)
 
 ## Dependencies
