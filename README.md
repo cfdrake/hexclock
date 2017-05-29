@@ -25,7 +25,7 @@ To deploy and test on a physical Apple TV, begin by fetching the development cer
 ```
 $ export FASTLANE_USER="<apple id>"
 $ export HEXCLOCK_CERTS_REPO="<git repository holding certificates>"
-$ bundle exec fetch_dev_cert
+$ bundle exec fastlane fetch_dev_cert
 ```
 
 To run on physical device, select your Apple TV device, then select `Product > Run`.
